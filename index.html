@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>CCS Line — Global Sea Freight & Sea Shipping</title>
   <meta name="description" content="CCS Line — Dubai-based global sea freight and container shipping. Reliable, on-time, worldwide." />
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='12' fill='%230a2540'/><text x='50%25' y='55%25' text-anchor='middle' fill='%23e63946' font-family='Poppins,Arial' font-weight='800' font-size='28'>C</text></svg>" />
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><defs><linearGradient id='g' x1='0' y1='1' x2='1' y2='0'><stop offset='0' stop-color='%231a3a6e'/><stop offset='1' stop-color='%232a9ec9'/></linearGradient></defs><rect width='64' height='64' rx='12' fill='white'/><path d='M8 42 C 20 30, 30 30, 40 34 L 48 26 L 50 30 L 46 34 C 38 40, 24 46, 8 46 Z' fill='url(%23g)'/></svg>" />
 
   <!-- Tailwind CSS (CDN) -->
   <script src="https://cdn.tailwindcss.com"></script>
@@ -25,13 +25,14 @@
           fontFamily: { sans: ['Poppins', 'system-ui', 'sans-serif'] },
           colors: {
             brand: {
-              navy:   '#0a2540',
-              deep:   '#06182d',
-              ocean:  '#13497a',
+              navy:   '#1a3a6e',
+              deep:   '#0f2347',
+              ocean:  '#1d6cb0',
               sky:    '#3fa7d6',
-              accent: '#e63946',
+              accent: '#2a9ec9',
+              teal:   '#2a9ec9',
               gold:   '#f4a261',
-              foam:   '#f1f7fb',
+              foam:   '#eef5fa',
             }
           },
           boxShadow: {
@@ -78,8 +79,13 @@
     .nav-link { position: relative; }
     .nav-link::after {
       content: ''; position: absolute; left: 0; bottom: -4px;
-      width: 0; height: 2px; background: #e63946; transition: width .3s ease;
+      width: 0; height: 2px; background: #2a9ec9; transition: width .3s ease;
     }
+
+    /* Logo mark gradient */
+    .logo-svg .wave-a { fill: url(#ccsGrad1); }
+    .logo-svg .wave-b { fill: url(#ccsGrad2); }
+    .logo-svg .wave-c { fill: url(#ccsGrad3); }
     .nav-link:hover::after, .nav-link.active::after { width: 100%; }
 
     /* Reveal on scroll */
@@ -95,12 +101,28 @@
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-16 md:h-20">
       <!-- Logo -->
       <a href="#home" class="flex items-center gap-3">
-        <div class="w-10 h-10 rounded-lg bg-brand-navy flex items-center justify-center shadow-soft">
-          <span class="text-white font-extrabold tracking-tight">C<span class="text-brand-accent">C</span>S</span>
-        </div>
+        <svg class="logo-svg w-11 h-11" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <defs>
+            <linearGradient id="ccsGrad1" x1="0" y1="1" x2="1" y2="0">
+              <stop offset="0" stop-color="#1a3a6e"/><stop offset="1" stop-color="#1d6cb0"/>
+            </linearGradient>
+            <linearGradient id="ccsGrad2" x1="0" y1="1" x2="1" y2="0">
+              <stop offset="0" stop-color="#1d6cb0"/><stop offset="1" stop-color="#2a9ec9"/>
+            </linearGradient>
+            <linearGradient id="ccsGrad3" x1="0" y1="1" x2="1" y2="0">
+              <stop offset="0" stop-color="#2a9ec9"/><stop offset="1" stop-color="#4cc3e6"/>
+            </linearGradient>
+          </defs>
+          <!-- inner deep wave -->
+          <path class="wave-a" d="M6 44 C 18 32, 28 32, 38 36 C 30 38, 22 42, 6 46 Z"/>
+          <!-- middle wave -->
+          <path class="wave-b" d="M6 50 C 20 38, 32 36, 44 40 C 34 44, 22 50, 6 52 Z"/>
+          <!-- top wave with arrow -->
+          <path class="wave-c" d="M8 56 C 22 46, 36 42, 48 44 L 54 38 L 56 42 L 50 48 C 38 52, 24 56, 8 58 Z"/>
+        </svg>
         <div class="leading-tight">
-          <div class="font-extrabold text-brand-navy text-lg">CCS Line</div>
-          <div class="text-[11px] uppercase tracking-widest text-brand-ocean -mt-0.5">Global Sea Freight</div>
+          <div class="font-extrabold text-brand-navy text-lg tracking-wide">CCS LINE</div>
+          <div class="text-[10px] uppercase tracking-[0.2em] text-brand-ocean -mt-0.5">Global Sea Freight</div>
         </div>
       </a>
 
@@ -459,12 +481,21 @@
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14 grid md:grid-cols-2 lg:grid-cols-4 gap-10">
       <div>
         <div class="flex items-center gap-3 mb-4">
-          <div class="w-10 h-10 rounded-lg bg-white/10 flex items-center justify-center">
-            <span class="text-white font-extrabold">C<span class="text-brand-accent">C</span>S</span>
+          <div class="w-11 h-11 rounded-lg bg-white flex items-center justify-center p-1">
+            <svg viewBox="0 0 64 64" class="w-full h-full" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <defs>
+                <linearGradient id="fGrad1" x1="0" y1="1" x2="1" y2="0"><stop offset="0" stop-color="#1a3a6e"/><stop offset="1" stop-color="#1d6cb0"/></linearGradient>
+                <linearGradient id="fGrad2" x1="0" y1="1" x2="1" y2="0"><stop offset="0" stop-color="#1d6cb0"/><stop offset="1" stop-color="#2a9ec9"/></linearGradient>
+                <linearGradient id="fGrad3" x1="0" y1="1" x2="1" y2="0"><stop offset="0" stop-color="#2a9ec9"/><stop offset="1" stop-color="#4cc3e6"/></linearGradient>
+              </defs>
+              <path d="M6 44 C 18 32, 28 32, 38 36 C 30 38, 22 42, 6 46 Z" fill="url(#fGrad1)"/>
+              <path d="M6 50 C 20 38, 32 36, 44 40 C 34 44, 22 50, 6 52 Z" fill="url(#fGrad2)"/>
+              <path d="M8 56 C 22 46, 36 42, 48 44 L 54 38 L 56 42 L 50 48 C 38 52, 24 56, 8 58 Z" fill="url(#fGrad3)"/>
+            </svg>
           </div>
           <div class="leading-tight">
-            <div class="font-extrabold text-white text-lg">CCS Line</div>
-            <div class="text-[11px] uppercase tracking-widest text-white/50 -mt-0.5">Global Sea Freight</div>
+            <div class="font-extrabold text-white text-lg tracking-wide">CCS LINE</div>
+            <div class="text-[10px] uppercase tracking-[0.2em] text-white/50 -mt-0.5">Global Sea Freight</div>
           </div>
         </div>
         <p class="text-sm leading-relaxed text-white/65">Dubai-based global sea freight and container shipping — moving trade since 2014.</p>
