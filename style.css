@@ -1,0 +1,57 @@
+/* ===========================================================
+   CCS Line — custom styles
+   =========================================================== */
+
+html { scroll-behavior: smooth; }
+body { font-family: 'Poppins', sans-serif; -webkit-font-smoothing: antialiased; }
+
+/* ---------- Hero slider ---------- */
+.slide { opacity: 0; transition: opacity 1s ease-in-out; position: absolute; inset: 0; }
+.slide.active { opacity: 1; z-index: 1; }
+.slide-img { width: 100%; height: 100%; object-fit: cover; }
+.slide::after {
+  content: '';
+  position: absolute; inset: 0;
+  background: linear-gradient(120deg, rgba(6,24,45,0.85) 0%, rgba(10,37,64,0.55) 50%, rgba(19,73,122,0.45) 100%);
+}
+.slide-content { position: relative; z-index: 2; }
+
+/* ---------- Marquee partners ---------- */
+.marquee-track { display: flex; width: max-content; animation: marquee 30s linear infinite; }
+.marquee-wrap:hover .marquee-track { animation-play-state: paused; }
+
+/* ---------- Header link underline ---------- */
+.nav-link { position: relative; }
+.nav-link::after {
+  content: ''; position: absolute; left: 0; bottom: -4px;
+  width: 0; height: 2px; background: #2a9ec9; transition: width .3s ease;
+}
+.nav-link:hover::after, .nav-link.active::after { width: 100%; }
+
+/* ---------- Reveal on scroll ---------- */
+.reveal { opacity: 0; transform: translateY(24px); transition: opacity .8s ease, transform .8s ease; }
+.reveal.in { opacity: 1; transform: none; }
+
+/* ---------- Theme toggle button ---------- */
+.theme-toggle {
+  position: relative;
+  width: 40px; height: 40px;
+  border-radius: 9999px;
+  display: inline-flex; align-items: center; justify-content: center;
+  background: #eef5fa;
+  color: #1a3a6e;
+  transition: background .25s ease, color .25s ease, transform .25s ease;
+}
+.theme-toggle:hover { background: #2a9ec9; color: #fff; transform: rotate(15deg); }
+.theme-toggle .icon-sun  { display: none; }
+.theme-toggle .icon-moon { display: inline; }
+.dark .theme-toggle { background: rgba(255,255,255,0.08); color: #f1f7fb; }
+.dark .theme-toggle:hover { background: #2a9ec9; color: #fff; }
+.dark .theme-toggle .icon-sun  { display: inline; }
+.dark .theme-toggle .icon-moon { display: none; }
+
+/* ---------- Dark mode tweaks for non-Tailwind elements ---------- */
+.dark body { background: #0f2347; color: #e2e8f0; }
+.dark .slide::after {
+  background: linear-gradient(120deg, rgba(0,0,0,0.85) 0%, rgba(15,35,71,0.65) 50%, rgba(26,58,110,0.45) 100%);
+}
