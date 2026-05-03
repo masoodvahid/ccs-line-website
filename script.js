@@ -112,11 +112,33 @@ window.addEventListener('scroll', () => {
   start();
 })();
 
-// ---------- Reveal on scroll ----------
-const io = new IntersectionObserver((entries) => {
-  entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
-}, { threshold: 0.12 });
-document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+// ---------- Reveal on scroll (with stagger support) ----------
+(() => {
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (!entry.isIntersecting) return;
+      const el = entry.target;
+
+      if (el.hasAttribute('data-stagger')) {
+        const step = parseInt(el.dataset.stagger, 10) || 100;
+        const children = el.querySelectorAll('.reveal');
+        children.forEach((child, i) => {
+          setTimeout(() => child.classList.add('in'), i * step);
+        });
+      } else {
+        el.classList.add('in');
+      }
+      io.unobserve(el);
+    });
+  }, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
+
+  // Observe stand-alone .reveal items (those NOT inside a [data-stagger] group)
+  document.querySelectorAll('.reveal').forEach(el => {
+    if (!el.closest('[data-stagger]')) io.observe(el);
+  });
+  // Observe stagger groups themselves
+  document.querySelectorAll('[data-stagger]').forEach(el => io.observe(el));
+})();
 
 // ---------- Active nav link on scroll ----------
 const sections = document.querySelectorAll('section[id]');
