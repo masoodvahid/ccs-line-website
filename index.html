@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>CCS Line — Global Sea Freight & Sea Shipping</title>
   <meta name="description" content="CCS Line — Dubai-based global sea freight and container shipping. Reliable, on-time, worldwide." />
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><defs><linearGradient id='g' x1='0' y1='1' x2='1' y2='0'><stop offset='0' stop-color='%231a3a6e'/><stop offset='1' stop-color='%232a9ec9'/></linearGradient></defs><rect width='64' height='64' rx='12' fill='white'/><path d='M8 42 C 20 30, 30 30, 40 34 L 48 26 L 50 30 L 46 34 C 38 40, 24 46, 8 46 Z' fill='url(%23g)'/></svg>" />
+  <link rel="icon" type="image/jpeg" href="imgs/logo-mark.jpg" />
 
   <!-- Tailwind CSS (CDN) -->
   <script src="https://cdn.tailwindcss.com"></script>
@@ -82,10 +82,6 @@
       width: 0; height: 2px; background: #2a9ec9; transition: width .3s ease;
     }
 
-    /* Logo mark gradient */
-    .logo-svg .wave-a { fill: url(#ccsGrad1); }
-    .logo-svg .wave-b { fill: url(#ccsGrad2); }
-    .logo-svg .wave-c { fill: url(#ccsGrad3); }
     .nav-link:hover::after, .nav-link.active::after { width: 100%; }
 
     /* Reveal on scroll */
@@ -101,29 +97,7 @@
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-16 md:h-20">
       <!-- Logo -->
       <a href="#home" class="flex items-center gap-3">
-        <svg class="logo-svg w-11 h-11" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-          <defs>
-            <linearGradient id="ccsGrad1" x1="0" y1="1" x2="1" y2="0">
-              <stop offset="0" stop-color="#1a3a6e"/><stop offset="1" stop-color="#1d6cb0"/>
-            </linearGradient>
-            <linearGradient id="ccsGrad2" x1="0" y1="1" x2="1" y2="0">
-              <stop offset="0" stop-color="#1d6cb0"/><stop offset="1" stop-color="#2a9ec9"/>
-            </linearGradient>
-            <linearGradient id="ccsGrad3" x1="0" y1="1" x2="1" y2="0">
-              <stop offset="0" stop-color="#2a9ec9"/><stop offset="1" stop-color="#4cc3e6"/>
-            </linearGradient>
-          </defs>
-          <!-- inner deep wave -->
-          <path class="wave-a" d="M6 44 C 18 32, 28 32, 38 36 C 30 38, 22 42, 6 46 Z"/>
-          <!-- middle wave -->
-          <path class="wave-b" d="M6 50 C 20 38, 32 36, 44 40 C 34 44, 22 50, 6 52 Z"/>
-          <!-- top wave with arrow -->
-          <path class="wave-c" d="M8 56 C 22 46, 36 42, 48 44 L 54 38 L 56 42 L 50 48 C 38 52, 24 56, 8 58 Z"/>
-        </svg>
-        <div class="leading-tight">
-          <div class="font-extrabold text-brand-navy text-lg tracking-wide">CCS LINE</div>
-          <div class="text-[10px] uppercase tracking-[0.2em] text-brand-ocean -mt-0.5">Global Sea Freight</div>
-        </div>
+        <img src="imgs/logo.jpg" alt="CCS Line" class="h-12 w-auto md:h-14" />
       </a>
 
       <!-- Desktop nav -->
@@ -169,15 +143,15 @@
     <div id="slider" class="absolute inset-0">
       <!-- Slide 1 -->
       <div class="slide active">
-        <img class="slide-img" src="https://images.unsplash.com/photo-1578575437130-527eed3abbec?auto=format&fit=crop&w=1920&q=80" alt="Container ship at sea" />
+        <img class="slide-img" src="imgs/hero-1.jpg" alt="Container ship at sea" />
       </div>
       <!-- Slide 2 -->
       <div class="slide">
-        <img class="slide-img" src="https://images.unsplash.com/photo-1494412574643-ff11b0a5c1c3?auto=format&fit=crop&w=1920&q=80" alt="Containers stacked at port" />
+        <img class="slide-img" src="imgs/hero-2.jpg" alt="Containers stacked at port" />
       </div>
       <!-- Slide 3 -->
       <div class="slide">
-        <img class="slide-img" src="https://images.unsplash.com/photo-1605281317010-fe5ffe798166?auto=format&fit=crop&w=1920&q=80" alt="Cargo ship sailing" />
+        <img class="slide-img" src="imgs/hero-3.jpg" alt="Cargo ship sailing" />
       </div>
     </div>
 
@@ -260,7 +234,7 @@
 
       <div class="relative reveal">
         <div class="rounded-2xl overflow-hidden shadow-soft">
-          <img src="https://images.pexels.com/photos/906982/pexels-photo-906982.jpeg?auto=compress&cs=tinysrgb&w=1200&h=900&fit=crop" alt="Container ship at JAFZA port, Jebel Ali, Dubai" class="w-full h-[420px] object-cover" />
+          <img src="imgs/about-jafza.jpg" alt="Container ship at JAFZA port, Jebel Ali, Dubai" class="w-full h-[420px] object-cover" />
         </div>
         <div class="absolute -bottom-6 -left-6 bg-brand-navy text-white p-5 rounded-xl shadow-soft hidden sm:block">
           <div class="flex items-center gap-3">
@@ -380,7 +354,7 @@
   <!-- ============== QUOTE ============== -->
   <section id="quote" class="relative py-20 lg:py-28 bg-brand-navy text-white overflow-hidden">
     <div class="absolute inset-0 opacity-20 pointer-events-none">
-      <img src="https://images.unsplash.com/photo-1494412574643-ff11b0a5c1c3?auto=format&fit=crop&w=1920&q=60" class="w-full h-full object-cover" alt="" />
+      <img src="imgs/quote-bg.jpg" class="w-full h-full object-cover" alt="" />
     </div>
     <div class="absolute inset-0 bg-gradient-to-r from-brand-deep via-brand-navy/90 to-brand-ocean/80"></div>
 
@@ -480,22 +454,9 @@
   <footer class="bg-brand-deep text-white/80">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14 grid md:grid-cols-2 lg:grid-cols-4 gap-10">
       <div>
-        <div class="flex items-center gap-3 mb-4">
-          <div class="w-11 h-11 rounded-lg bg-white flex items-center justify-center p-1">
-            <svg viewBox="0 0 64 64" class="w-full h-full" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-              <defs>
-                <linearGradient id="fGrad1" x1="0" y1="1" x2="1" y2="0"><stop offset="0" stop-color="#1a3a6e"/><stop offset="1" stop-color="#1d6cb0"/></linearGradient>
-                <linearGradient id="fGrad2" x1="0" y1="1" x2="1" y2="0"><stop offset="0" stop-color="#1d6cb0"/><stop offset="1" stop-color="#2a9ec9"/></linearGradient>
-                <linearGradient id="fGrad3" x1="0" y1="1" x2="1" y2="0"><stop offset="0" stop-color="#2a9ec9"/><stop offset="1" stop-color="#4cc3e6"/></linearGradient>
-              </defs>
-              <path d="M6 44 C 18 32, 28 32, 38 36 C 30 38, 22 42, 6 46 Z" fill="url(#fGrad1)"/>
-              <path d="M6 50 C 20 38, 32 36, 44 40 C 34 44, 22 50, 6 52 Z" fill="url(#fGrad2)"/>
-              <path d="M8 56 C 22 46, 36 42, 48 44 L 54 38 L 56 42 L 50 48 C 38 52, 24 56, 8 58 Z" fill="url(#fGrad3)"/>
-            </svg>
-          </div>
-          <div class="leading-tight">
-            <div class="font-extrabold text-white text-lg tracking-wide">CCS LINE</div>
-            <div class="text-[10px] uppercase tracking-[0.2em] text-white/50 -mt-0.5">Global Sea Freight</div>
+        <div class="mb-4">
+          <div class="inline-block bg-white rounded-xl p-2">
+            <img src="imgs/logo.jpg" alt="CCS Line" class="h-20 w-auto" />
           </div>
         </div>
         <p class="text-sm leading-relaxed text-white/65">Dubai-based global sea freight and container shipping — moving trade since 2014.</p>
