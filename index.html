@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>CCS Line — Global Sea Freight & Sea Shipping</title>
   <meta name="description" content="CCS Line — Dubai-based global sea freight and container shipping. Reliable, on-time, worldwide." />
-  <link rel="icon" type="image/jpeg" href="imgs/logo-mark.jpg" />
+  <link rel="icon" type="image/jpeg" href="imgs/ccs_logo1.png" />
 
   <!-- No-flash dark-mode init (must run before paint) -->
   <script>
@@ -17,41 +17,8 @@
     })();
   </script>
 
-  <!-- Tailwind CSS (CDN) -->
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      darkMode: 'class',
-      theme: {
-        extend: {
-          fontFamily: { sans: ['Poppins', 'system-ui', 'sans-serif'] },
-          colors: {
-            brand: {
-              navy:   '#1a3a6e',
-              deep:   '#0f2347',
-              ocean:  '#1d6cb0',
-              sky:    '#3fa7d6',
-              accent: '#2a9ec9',
-              teal:   '#2a9ec9',
-              gold:   '#f4a261',
-              foam:   '#eef5fa',
-            }
-          },
-          boxShadow: {
-            soft: '0 10px 30px -12px rgba(10,37,64,0.25)',
-          },
-          keyframes: {
-            float: { '0%,100%': { transform: 'translateY(0)' }, '50%': { transform: 'translateY(-8px)' } },
-            marquee: { '0%': { transform: 'translateX(0)' }, '100%': { transform: 'translateX(-50%)' } },
-          },
-          animation: {
-            float: 'float 4s ease-in-out infinite',
-            marquee: 'marquee 30s linear infinite',
-          }
-        }
-      }
-    }
-  </script>
+  <!-- Tailwind CSS (local) -->
+  <link rel="stylesheet" href="tailwind.css" />
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -72,7 +39,7 @@
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-16 md:h-20">
       <!-- Logo -->
       <a href="#home" class="flex items-center gap-3">
-        <img src="imgs/logo.jpg" alt="CCS Line" class="h-12 w-auto md:h-14 dark:bg-white dark:rounded-md" />
+        <img src="imgs/ccs_logo2.png" alt="CCS Line" class="h-12 w-auto md:h-14 dark:bg-white dark:rounded-md" />
       </a>
 
       <!-- Desktop nav -->
@@ -131,13 +98,13 @@
     <!-- Slides -->
     <div id="slider" class="absolute inset-0">
       <div class="slide active">
-        <img class="slide-img" src="imgs/hero-1.jpg" alt="Container ship at sea" />
+        <img class="slide-img" src="imgs/hero-6.webp" alt="Container ship at sea" />
       </div>
       <div class="slide">
-        <img class="slide-img" src="imgs/hero-2.jpg" alt="Containers stacked at port" />
+        <img class="slide-img" src="imgs/hero-2.webp" alt="Containers stacked at port" />
       </div>
       <div class="slide">
-        <img class="slide-img" src="imgs/hero-3.jpg" alt="Cargo ship sailing" />
+        <img class="slide-img" src="imgs/hero-5.webp" alt="Cargo ship sailing" />
       </div>
     </div>
 
@@ -185,7 +152,7 @@
     </div>
 
     <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid lg:grid-cols-2 gap-12 items-center">
-      <div class="reveal reveal-left">
+      <div class="reveal">
         <span class="text-xs font-bold tracking-[0.25em] uppercase text-brand-accent">About CCS Line</span>
         <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold mt-3 mb-6 leading-tight">A Decade of Trust on the High Seas.</h2>
         <p class="text-brand-navy/75 dark:text-slate-300 text-lg leading-relaxed mb-5">
@@ -195,25 +162,25 @@
           Our commitment is simple — move your cargo safely, transparently, and on time. With a network of trusted partners across major ports, we make global shipping feel local.
         </p>
 
-        <div class="grid grid-cols-3 gap-4" data-stagger="120">
-          <div class="reveal reveal-up text-center bg-brand-foam dark:bg-white/5 rounded-xl p-4">
+        <div class="grid grid-cols-3 gap-4">
+          <div class="text-center bg-brand-foam dark:bg-white/5 rounded-xl p-4">
             <div class="text-3xl font-extrabold text-brand-navy dark:text-white">10+</div>
             <div class="text-xs uppercase tracking-wider text-brand-ocean dark:text-brand-accent mt-1">Years</div>
           </div>
-          <div class="reveal reveal-up text-center bg-brand-foam dark:bg-white/5 rounded-xl p-4">
+          <div class="text-center bg-brand-foam dark:bg-white/5 rounded-xl p-4">
             <div class="text-3xl font-extrabold text-brand-navy dark:text-white">120+</div>
             <div class="text-xs uppercase tracking-wider text-brand-ocean dark:text-brand-accent mt-1">Ports</div>
           </div>
-          <div class="reveal reveal-up text-center bg-brand-foam dark:bg-white/5 rounded-xl p-4">
+          <div class="text-center bg-brand-foam dark:bg-white/5 rounded-xl p-4">
             <div class="text-3xl font-extrabold text-brand-navy dark:text-white">5K+</div>
             <div class="text-xs uppercase tracking-wider text-brand-ocean dark:text-brand-accent mt-1">Shipments</div>
           </div>
         </div>
       </div>
 
-      <div class="relative reveal reveal-right">
+      <div class="relative reveal">
         <div class="rounded-2xl overflow-hidden shadow-soft">
-          <img src="imgs/about-jafza.jpg" alt="Container ship at JAFZA port, Jebel Ali, Dubai" class="w-full h-[420px] object-cover" />
+          <img src="imgs/jafza-port.jpg" alt="Container ship at JAFZA port, Jebel Ali, Dubai" class="w-full h-[420px] object-cover" />
         </div>
         <div class="absolute -bottom-6 -left-6 bg-brand-navy text-white p-5 rounded-xl shadow-soft hidden sm:block">
           <div class="flex items-center gap-3">
@@ -231,14 +198,14 @@
   <!-- ============== SERVICES ============== -->
   <section id="services" class="relative py-20 lg:py-28 bg-brand-foam dark:bg-brand-navy/30">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="text-center max-w-2xl mx-auto mb-14 reveal reveal-up">
+      <div class="text-center max-w-2xl mx-auto mb-14 reveal">
         <span class="text-xs font-bold tracking-[0.25em] uppercase text-brand-accent">What We Do</span>
         <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold mt-3 mb-4 leading-tight">Shipping Services Built Around You.</h2>
         <p class="text-brand-navy/70 dark:text-slate-400">Comprehensive sea freight and container solutions tailored for businesses of every size.</p>
       </div>
 
-      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6" data-stagger="110">
-        <div class="reveal reveal-zoom group bg-white dark:bg-white/5 rounded-2xl p-7 shadow-soft hover:-translate-y-1 transition-all border border-transparent hover:border-brand-sky/40">
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="reveal group bg-white dark:bg-white/5 rounded-2xl p-7 shadow-soft hover:-translate-y-1 transition-all border border-transparent hover:border-brand-sky/40">
           <div class="w-14 h-14 rounded-xl bg-brand-navy text-white flex items-center justify-center text-2xl group-hover:bg-brand-accent transition-colors">
             <i class="fa-solid fa-ship"></i>
           </div>
@@ -246,7 +213,7 @@
           <p class="mt-2 text-brand-navy/70 dark:text-slate-400 text-sm leading-relaxed">Full Container Load services with end-to-end tracking and on-time port delivery worldwide.</p>
         </div>
 
-        <div class="reveal reveal-zoom group bg-white dark:bg-white/5 rounded-2xl p-7 shadow-soft hover:-translate-y-1 transition-all border border-transparent hover:border-brand-sky/40">
+        <div class="reveal group bg-white dark:bg-white/5 rounded-2xl p-7 shadow-soft hover:-translate-y-1 transition-all border border-transparent hover:border-brand-sky/40">
           <div class="w-14 h-14 rounded-xl bg-brand-navy text-white flex items-center justify-center text-2xl group-hover:bg-brand-accent transition-colors">
             <i class="fa-solid fa-boxes-stacked"></i>
           </div>
@@ -254,7 +221,7 @@
           <p class="mt-2 text-brand-navy/70 dark:text-slate-400 text-sm leading-relaxed">Cost-effective Less than Container Load shipments consolidated through major sea routes.</p>
         </div>
 
-        <div class="reveal reveal-zoom group bg-white dark:bg-white/5 rounded-2xl p-7 shadow-soft hover:-translate-y-1 transition-all border border-transparent hover:border-brand-sky/40">
+        <div class="reveal group bg-white dark:bg-white/5 rounded-2xl p-7 shadow-soft hover:-translate-y-1 transition-all border border-transparent hover:border-brand-sky/40">
           <div class="w-14 h-14 rounded-xl bg-brand-navy text-white flex items-center justify-center text-2xl group-hover:bg-brand-accent transition-colors">
             <i class="fa-solid fa-warehouse"></i>
           </div>
@@ -262,7 +229,7 @@
           <p class="mt-2 text-brand-navy/70 dark:text-slate-400 text-sm leading-relaxed">Secure storage, inventory management and distribution from our Dubai-based facilities.</p>
         </div>
 
-        <div class="reveal reveal-zoom group bg-white dark:bg-white/5 rounded-2xl p-7 shadow-soft hover:-translate-y-1 transition-all border border-transparent hover:border-brand-sky/40">
+        <div class="reveal group bg-white dark:bg-white/5 rounded-2xl p-7 shadow-soft hover:-translate-y-1 transition-all border border-transparent hover:border-brand-sky/40">
           <div class="w-14 h-14 rounded-xl bg-brand-navy text-white flex items-center justify-center text-2xl group-hover:bg-brand-accent transition-colors">
             <i class="fa-solid fa-file-invoice"></i>
           </div>
@@ -270,7 +237,7 @@
           <p class="mt-2 text-brand-navy/70 dark:text-slate-400 text-sm leading-relaxed">Hassle-free import/export documentation, duties handling, and compliance management.</p>
         </div>
 
-        <div class="reveal reveal-zoom group bg-white dark:bg-white/5 rounded-2xl p-7 shadow-soft hover:-translate-y-1 transition-all border border-transparent hover:border-brand-sky/40">
+        <div class="reveal group bg-white dark:bg-white/5 rounded-2xl p-7 shadow-soft hover:-translate-y-1 transition-all border border-transparent hover:border-brand-sky/40">
           <div class="w-14 h-14 rounded-xl bg-brand-navy text-white flex items-center justify-center text-2xl group-hover:bg-brand-accent transition-colors">
             <i class="fa-solid fa-truck-fast"></i>
           </div>
@@ -278,7 +245,7 @@
           <p class="mt-2 text-brand-navy/70 dark:text-slate-400 text-sm leading-relaxed">Complete logistics — from your supplier's warehouse straight to your customer's door.</p>
         </div>
 
-        <div class="reveal reveal-zoom group bg-white dark:bg-white/5 rounded-2xl p-7 shadow-soft hover:-translate-y-1 transition-all border border-transparent hover:border-brand-sky/40">
+        <div class="reveal group bg-white dark:bg-white/5 rounded-2xl p-7 shadow-soft hover:-translate-y-1 transition-all border border-transparent hover:border-brand-sky/40">
           <div class="w-14 h-14 rounded-xl bg-brand-navy text-white flex items-center justify-center text-2xl group-hover:bg-brand-accent transition-colors">
             <i class="fa-solid fa-route"></i>
           </div>
@@ -292,13 +259,13 @@
   <!-- ============== PARTNERS ============== -->
   <section id="partners" class="py-20 lg:py-24 bg-white dark:bg-brand-deep">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="text-center max-w-2xl mx-auto mb-12 reveal reveal-up">
+      <div class="text-center max-w-2xl mx-auto mb-12 reveal">
         <span class="text-xs font-bold tracking-[0.25em] uppercase text-brand-accent">Trusted By</span>
         <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold mt-3 mb-4 leading-tight">Our Shipping Partners.</h2>
         <p class="text-brand-navy/70 dark:text-slate-400">We work with the world's leading carriers and logistics networks.</p>
       </div>
 
-      <div class="reveal reveal-blur marquee-wrap overflow-hidden relative">
+      <div class="marquee-wrap overflow-hidden relative">
         <div class="absolute inset-y-0 left-0 w-24 bg-gradient-to-r from-white dark:from-brand-deep to-transparent z-10"></div>
         <div class="absolute inset-y-0 right-0 w-24 bg-gradient-to-l from-white dark:from-brand-deep to-transparent z-10"></div>
         <div class="marquee-track gap-12 py-6">
@@ -337,7 +304,7 @@
     <div class="absolute inset-0 bg-gradient-to-r from-brand-deep via-brand-navy/90 to-brand-ocean/80"></div>
 
     <div class="relative max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 grid lg:grid-cols-2 gap-12 items-center">
-      <div class="reveal reveal-left">
+      <div class="reveal">
         <span class="text-xs font-bold tracking-[0.25em] uppercase text-brand-accent">Get Started</span>
         <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold mt-3 mb-5 leading-tight">Request Your Free Shipping Quote.</h2>
         <p class="text-white/80 leading-relaxed mb-6">Tell us where it goes and what you ship. Our team will get back to you within 24 hours with a tailored quotation.</p>
@@ -348,7 +315,7 @@
         </ul>
       </div>
 
-      <form id="quoteForm" class="reveal reveal-right bg-white text-brand-navy rounded-2xl p-6 sm:p-8 shadow-soft space-y-4">
+      <form id="quoteForm" class="reveal bg-white text-brand-navy rounded-2xl p-6 sm:p-8 shadow-soft space-y-4">
         <div>
           <label class="block text-sm font-medium mb-1.5" for="q-name">Full Name</label>
           <input id="q-name" name="name" type="text" required placeholder="John Doe"
@@ -375,7 +342,7 @@
           class="w-full inline-flex items-center justify-center gap-2 bg-brand-accent hover:bg-brand-ocean text-white font-semibold px-6 py-3.5 rounded-full transition-all shadow-soft">
           <i class="fa-solid fa-paper-plane"></i> Send Request
         </button>
-        <p id="formNote" class="text-xs text-brand-navy/60 text-center">Submitting opens your email client to send to <strong>quote@ccs-idea.ae</strong>.</p>
+        <p id="formNote" class="text-xs text-brand-navy/60 text-center">Submitting opens your email client to send to <strong>quote@ccs-line.ae</strong>.</p>
       </form>
     </div>
   </section>
@@ -383,14 +350,14 @@
   <!-- ============== CONTACT ============== -->
   <section id="contact" class="py-20 lg:py-28 bg-white dark:bg-brand-deep">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="text-center max-w-2xl mx-auto mb-12 reveal reveal-up">
+      <div class="text-center max-w-2xl mx-auto mb-12 reveal">
         <span class="text-xs font-bold tracking-[0.25em] uppercase text-brand-accent">Get in Touch</span>
         <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold mt-3 mb-4 leading-tight">Let's Move Your Cargo.</h2>
         <p class="text-brand-navy/70 dark:text-slate-400">We're here to answer your questions, around the clock.</p>
       </div>
 
-      <div class="grid lg:grid-cols-3 gap-6 mb-10" data-stagger="140">
-        <div class="reveal reveal-up bg-brand-foam dark:bg-white/5 rounded-2xl p-6 flex items-start gap-4">
+      <div class="grid lg:grid-cols-3 gap-6 mb-10">
+        <div class="reveal bg-brand-foam dark:bg-white/5 rounded-2xl p-6 flex items-start gap-4">
           <div class="w-12 h-12 rounded-xl bg-brand-navy text-white flex items-center justify-center text-lg shrink-0">
             <i class="fa-solid fa-location-dot"></i>
           </div>
@@ -399,7 +366,7 @@
             <p class="text-brand-navy/70 dark:text-slate-400 text-sm mt-1">Business Bay, Dubai, United Arab Emirates</p>
           </div>
         </div>
-        <div class="reveal reveal-up bg-brand-foam dark:bg-white/5 rounded-2xl p-6 flex items-start gap-4">
+        <div class="reveal bg-brand-foam dark:bg-white/5 rounded-2xl p-6 flex items-start gap-4">
           <div class="w-12 h-12 rounded-xl bg-brand-navy text-white flex items-center justify-center text-lg shrink-0">
             <i class="fa-solid fa-envelope"></i>
           </div>
@@ -408,7 +375,7 @@
             <a href="mailto:info@ccs-line.ae" class="text-brand-ocean dark:text-brand-accent hover:text-brand-accent transition text-sm mt-1 inline-block">info@ccs-line.ae</a>
           </div>
         </div>
-        <div class="reveal reveal-up bg-brand-foam dark:bg-white/5 rounded-2xl p-6 flex items-start gap-4">
+        <div class="reveal bg-brand-foam dark:bg-white/5 rounded-2xl p-6 flex items-start gap-4">
           <div class="w-12 h-12 rounded-xl bg-brand-navy text-white flex items-center justify-center text-lg shrink-0">
             <i class="fa-brands fa-whatsapp"></i>
           </div>
@@ -419,7 +386,7 @@
         </div>
       </div>
 
-      <div class="reveal reveal-zoom rounded-2xl overflow-hidden shadow-soft border border-brand-foam dark:border-white/10">
+      <div class="reveal rounded-2xl overflow-hidden shadow-soft border border-brand-foam dark:border-white/10">
         <iframe
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d115717.59689573596!2d55.20821215!3d25.1972125!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f43496ad9c645%3A0xbde66e5084295162!2sDubai!5e0!3m2!1sen!2sae!4v1700000000000"
           width="100%" height="380" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
@@ -434,7 +401,7 @@
       <div>
         <div class="mb-4">
           <div class="inline-block bg-white rounded-xl p-2">
-            <img src="imgs/logo.jpg" alt="CCS Line" class="h-20 w-auto" />
+            <img src="imgs/ccs_logo2.png" alt="CCS Line" class="h-20 w-auto" />
           </div>
         </div>
         <p class="text-sm leading-relaxed text-white/65">Dubai-based global sea freight and container shipping — moving trade since 2014.</p>
